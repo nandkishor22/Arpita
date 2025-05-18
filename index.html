@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpita's Mehndi Art</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        },
+                        accent: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'slide-down': 'slideDown 0.5s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'shine': 'shine 2s ease-in-out infinite',
+                        'scale': 'scale 0.3s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shine: {
+                            '0%': { backgroundPosition: '200% center' },
+                            '100%': { backgroundPosition: '-200% center' },
+                        },
+                        scale: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hover-shine {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shine 2s ease-in-out infinite;
+        }
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-[Poppins] bg-gradient-to-br from-primary-50 to-accent-50">
+    <!-- Navigation -->
+    <nav class="py-4 bg-white/50 backdrop-blur shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Arpita's Mehndi</a>
+                <button class="mobile-menu-button md:hidden p-2 hover:bg-primary-50 rounded-lg transition-colors" aria-label="Menu">
+                    <i class="fas fa-bars text-2xl text-primary-600"></i>
+                </button>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Contact</a>
+                </div>
+            </div>
+            <div class="mobile-menu hidden md:hidden mt-4 bg-white/80 backdrop-blur p-4 rounded-lg shadow-lg">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors duration-300 font-medium hover:scale-110">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-[url('photos/m5.jpg')] bg-cover bg-center bg-no-repeat h-screen min-h-[800px] flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-accent-800/60 to-primary-900/70"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg animate-slide-up">Arpita's Mehndi Art</h1>
+            <p class="text-2xl mb-10 text-white drop-shadow animate-slide-up delay-100">Exquisite Henna Designs for Your Special Occasions</p>
+            <a href="https://wa.me/919011124640?text=Hi%20Arpita%2C%20I%20would%20like%20to%20know%20more%20about%20your%20mehndi%20services." class="inline-block px-6 sm:px-10 py-4 sm:py-5 bg-[#25D366] text-white text-base sm:text-lg font-semibold rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 animate-bounce-slow w-[90%] sm:w-auto hover-shine" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp mr-2"></i>Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-white via-primary-50 to-white section-fade">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold mb-8 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">About Me</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">With years of experience in creating beautiful mehndi designs, I specialize in traditional and contemporary patterns that make your special occasions even more memorable.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-primary-50 via-white to-primary-50 section-fade">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group hover:scale-105">
+                    <i class="fas fa-hands text-4xl text-primary-600 mb-4 group-hover:scale-110 transition-transform duration-300 animate-float"></i>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Bridal Mehndi</h3>
+                    <p class="text-gray-600">Complete bridal mehndi designs with intricate patterns.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group hover:scale-105">
+                    <i class="fas fa-star text-4xl text-primary-600 mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style="animation-delay: 0.2s"></i>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Party Mehndi</h3>
+                    <p class="text-gray-600">Beautiful designs for parties and special occasions.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group hover:scale-105">
+                    <i class="fas fa-paint-brush text-4xl text-primary-600 mb-4 group-hover:scale-110 transition-transform duration-300 animate-float" style="animation-delay: 0.4s"></i>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Custom Designs</h3>
+                    <p class="text-gray-600">Personalized mehndi designs for your preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white section-fade">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Our Designs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="photos/m2.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <img src="photos/m3.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <img src="photos/m4.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <img src="photos/m5.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <img src="photos/m6.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <img src="photos/m7.jpg" alt="Mehndi Design" class="w-full h-[300px] object-cover rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-primary-50 via-white to-primary-50 section-fade">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Contact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <form id="whatsappForm">
+                        <input type="text" id="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-primary-200 mb-4 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-all duration-300" required>
+                        <input type="text" id="address" placeholder="Your Address" class="w-full px-4 py-3 rounded-lg border border-primary-200 mb-4 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-all duration-300" required>
+                        <textarea id="message" placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded-lg border border-primary-200 mb-4 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-all duration-300" required></textarea>
+                        <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 hover-shine">
+                            <i class="fab fa-whatsapp mr-2"></i>Send via WhatsApp
+                        </button>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex flex-col items-center justify-center">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Contact Info</h3>
+                    <p class="flex items-center mb-4 text-gray-600 hover:text-primary-600 transition-colors duration-300">
+                        <i class="fas fa-phone mr-3 text-primary-600"></i>
+                        <span>+91 9011124640</span>
+                    </p>
+                    <p class="flex items-center mb-6 text-gray-600 hover:text-primary-600 transition-colors duration-300">
+                        <i class="fas fa-map-marker-alt mr-3 text-primary-600"></i>
+                        <span>Kavathe Mahankal, Sangli, Maharashtra</span>
+                    </p>
+                    <a href="https://www.instagram.com/a2_mehandi_artist_?igsh=MXJnbXlic2Nrcm1n" class="inline-block w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 animate-pulse-slow" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Arpita's Mehndi Art</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/919011124640?text=Hi%20Arpita%2C%20I%20would%20like%20to%20know%20more%20about%20your%20mehndi%20services." class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-3xl transition-all duration-300 animate-bounce-slow hover-shine" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('whatsappForm')?.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = `Name:- ${this.name.value}\nAddress:- ${this.address.value}\n\nrequirement :-\n${this.message.value}`;
+            window.open(`https://wa.me/919011124640?text=${encodeURIComponent(message)}`, '_blank');
+            this.reset();
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
