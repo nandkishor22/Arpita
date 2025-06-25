@@ -1,3 +1,4 @@
+
 # 🌸 Arpita Mehndi Art Portfolio
 
 Welcome to **Arpita's Mehndi Art Portfolio**, a beautifully crafted website to showcase traditional and modern mehndi designs. Designed with elegance and simplicity in mind.
@@ -59,3 +60,28 @@ npm install
 
 # Start local dev server
 npm run dev
+```
+
+---
+
+## 📱 Contact
+
+📸 Instagram: [@arpita_mehndi_art](https://instagram.com/your-profile)  
+💬 WhatsApp: [+91-XXXXXXXXXX](https://wa.me/91XXXXXXXXXX)
+
+---
+
+## 🙋‍♀️ Author
+
+**Arpita**  
+Lover of art, tradition, and creativity.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> Made with ❤️ for Mehndi lovers by Arpita
