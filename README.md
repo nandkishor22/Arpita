@@ -49,10 +49,10 @@ To run the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/arpita-mehndi-portfolio.git
+git clone https://github.com/nandkishor22/Arpita.git
 
 # Navigate into the directory
-cd arpita-mehndi-portfolio
+cd Arpita
 
 # Install dependencies
 npm install
@@ -65,8 +65,8 @@ npm run dev
 
 ## 📱 Contact
 
-📸 Instagram: [@arpita_mehndi_art](https://instagram.com/your-profile)  
-💬 WhatsApp: [+91-XXXXXXXXXX](https://wa.me/91XXXXXXXXXX)
+📸 Instagram: [a2_mehandi_artist_](https://www.instagram.com/a2_mehandi_artist_/)  
+💬 WhatsApp: [+91-90111 24640](https://wa.me/919011124640)
 
 ---
 
@@ -77,10 +77,4 @@ Lover of art, tradition, and creativity.
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-> Made with ❤️ for Mehndi lovers by Arpita
+> Made with ❤️ for Mehndi lovers by Nandkishor
