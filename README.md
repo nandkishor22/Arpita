@@ -19,8 +19,7 @@ Welcome to **Arpita's Mehndi Art Portfolio**, a beautifully crafted website to s
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live site](https://your-demo-link.com)  
-*(Replace with your actual GitHub Pages or hosting link)*
+👉 [Click here to view the live site](https://nandkishor22.github.io/Arpita/)
 
 ---
 
